@@ -6,7 +6,7 @@
     <title>Food Ninja</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="text-gray-500">
+  <body class="text-gray-500 font-body">
     <div>
       <!-- content wrapper -->
       <div>
@@ -38,13 +38,13 @@
       <!-- end nav -->
 
       <main class="px-16 py-6">
-        <div>
-          <a href="#">Log In</a>
-          <a href="#">Sign Up</a>
+        <div class="flex justify-center md:justify-end gap-3">
+          <a href="#" class="text-primary">Log In</a>
+          <a href="#" class="text-primary">Sign Up</a>
         </div>
 
         <header>
-          <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
+          <h2 class="text-gray-700 text-6xl mb-5 font-semibold">Recipes</h2>
           <h3 class="text-2xl font-semibold">For Ninjas</h3>
         </header>
 
@@ -72,8 +72,10 @@
             <!-- Cards go here -->
           </div>
 
-          <div>
-            <button>Load more</button>
+          <div class="flex justify-center">
+            <button class="bg-secondary-100 text-secondary-200">
+              Load more
+            </button>
           </div>
         </div>
       </main>
