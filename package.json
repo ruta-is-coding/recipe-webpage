@@ -1,15 +1,20 @@
 {
+  "homepage": "https://ruta-is-coding.github.io/recipe-webpage",
   "name": "ninja-food",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build src/style.css -o public/style.css"
+    "build-css": "tailwindcss build src/style.css -o public/style.css",
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
   }
 }
