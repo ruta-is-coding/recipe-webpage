@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Ninja</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="text-gray-500 font-body">
+    <div class="grid md:grid-cols-5">
+      <!-- content wrapper -->
+      <div class="md:col-span-1 md:flex md:justify-end">
+        <nav class="text-right">
+          <div class="flex justify-between items-center">
+            <h1 class="font-bold uppercase p-4 border-b border-gray-100">
+              <a href="#" class="hover:text-gray-600">Food Ninja</a>
+            </h1>
+            <div class="px-4 cursor-pointer md:hidden" id="burger">
+              <!-- md:hidden hides it in medium and larger screens -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-list w-6"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="text-sm md:text-lg mt-2 mb-2 hidden md:block"
+            id="burgerMenu"
+          >
+            <li class="text-gray-700 font-bold py-2 md:py-5">
+              <a
+                href="#"
+                class="px-4 flex justify-end border-r-4 border-primary"
+              >
+                <span>Home</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-house-heart w-5 ml-2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.309 8 6.982Z"
+                  />
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="py-2 md:py-5">
+              <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+                <span>About</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-patch-question w-5 ml-2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.05 9.6c.336 0 .504-.24.554-.627.04-.534.198-.815.847-1.26.673-.475 1.049-1.09 1.049-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745z"
+                  />
+                  <path
+                    d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"
+                  />
+                  <path d="M7.001 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0z" />
+                </svg>
+              </a>
+            </li>
+            <li class="py-2 md:py-5">
+              <a href="#" class="px-4 flex justify-end border-r-4 border-white">
+                <span>Contact</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-telephone w-5 ml-2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- end nav -->
+
+      <main class="px-16 py-6 bg-gray-100 md:col-span-4">
+        <div class="flex justify-center md:justify-end gap-3">
+          <a
+            href="#"
+            class="text-primary btn border-primary border-2 hover:bg-primary hover:text-white transition ease-out duration-500"
+            >Log In</a
+          >
+          <a
+            href="#"
+            class="text-primary btn border-primary border-2 hover:bg-primary hover:text-white transition ease-out duration-500"
+            >Sign Up</a
+          >
+        </div>
+
+        <header>
+          <h2 class="text-gray-700 text-6xl mt-5 mb-9 font-semibold">
+            Recipes
+          </h2>
+          <h3 class="text-2xl font-semibold">For Ninjas</h3>
+        </header>
+
+        <div>
+          <h4 class="font-bold mt-11 pb-2 border-b border-gray-200 text-lg">
+            Lastest Recipes:
+          </h4>
+
+          <div class="mt-8 grid lg:grid-cols-3 gap-10">
+            <!-- Cards go here -->
+
+            <!-- card is a reusable class -->
+            <!-- overflow-hidden class makes all of the corners rounded -->
+            <!-- w-full class makes the width 100 % of the element's parent-->
+            <!-- object-cover class removes the image distortion -->
+            <div class="card hover:shadow-lg">
+              <img
+                src="img/stew.jpg"
+                alt="stew"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4 flex flex-col gap-3">
+                <span>5 Bean Chilli Stew</span>
+                <span class="text-gray-400 text-sm">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <!-- badge is a reusable class -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-clock w-5 inline-block"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                  />
+                  <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                  />
+                </svg>
+                <span>25 mins</span>
+              </div>
+            </div>
+
+            <div class="card hover:shadow-lg">
+              <img
+                src="img/noodles.jpg"
+                alt="noodles"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4 flex flex-col gap-3">
+                <span>Veg Noodles</span>
+                <span class="text-gray-400 text-sm">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <!-- badge is a reusable class -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-clock w-5 inline-block"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                  />
+                  <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                  />
+                </svg>
+                <span>25 mins</span>
+              </div>
+            </div>
+
+            <div class="card hover:shadow-lg">
+              <img
+                src="img/curry.jpg"
+                alt="curry"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4 flex flex-col gap-3">
+                <span>Tofu Curry</span>
+                <span class="text-gray-400 text-sm">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <!-- badge is a reusable class -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-clock w-5 inline-block"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                  />
+                  <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                  />
+                </svg>
+                <span>25 mins</span>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="font-bold mt-12 pb-2 border-b border-gray-200 text-lg">
+            Most Popular Recipes:
+          </h4>
+
+          <div class="mt-8">
+            <!-- Cards go here -->
+          </div>
+
+          <div class="flex justify-center">
+            <button
+              class="bg-secondary-100 text-secondary-200 btn hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300"
+            >
+              Load more
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
